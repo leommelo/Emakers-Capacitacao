@@ -25,11 +25,18 @@ function App() {
     <div >
       <div className='topo'>
         <div className='title'><p id='cu'>To do List</p></div>
+        <div className='cab'>
+          <div className='input'>
+            <input type="text" placeholder='Ex: Levar o lixo para a rua' />
+            <button id='butaoInput'>Adicionar tarefa</button>
+          </div>
+        </div>
       </div>
+      <div className='barraLaranja'></div>
       <div className='bottom'>
       <div className='todos'>
         <div className='todo-block'>
-          <div className='block-Title'><p>To Do</p></div>
+          <div className='block-Title'><p>TO DO</p></div>
           {todos.map((todo) =>(
             <div className="content">
               <p>{todo.Nome}</p>
@@ -38,11 +45,16 @@ function App() {
           ))}
         </div>
         <div className='todo-block'>
-          <div className='block-Title'><p>Doing</p></div>
+          <div className='block-Title'><p>DOING</p></div>
+          <button className='seta'>⮕</button>
         </div>
-          <div className='todo-block'>
-        <div className='block-Title'><p>Done</p></div>
+        <div className='todo-block'>
+          <div className='block-Title'><p>DONE</p></div>
+          <button className='seta'>⮕</button>
         </div>
+      </div>
+      <div className='rodaPe'>
+        <div className='logo'></div>
       </div>
       </div>
     </div>
