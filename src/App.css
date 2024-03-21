@@ -8,7 +8,6 @@ body {
 .topo{
   width: 100vw;
   height: 200px;
-  background-color: peru;
   display: flex;
   flex-direction: row;
   justify-content: start;
