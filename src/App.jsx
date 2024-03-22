@@ -15,7 +15,7 @@ function App() {
       situação: 0,
     },
     {
-      id: 1,
+      id: 3,
       Nome: "Criar piruzinho",
       situação: 0,
     }
@@ -26,11 +26,11 @@ function App() {
       <div className='topo'>
         <div className='title'><p id='cu'>To do List</p></div>
         <div className='cab'>
-          <div className='input'>
+        </div>
+        <div className='input'>
             <input type="text" placeholder='Ex: Levar o lixo para a rua' />
             <button id='butaoInput'>Adicionar tarefa</button>
           </div>
-        </div>
       </div>
       <div className='barraLaranja'></div>
       <div className='bottom'>
