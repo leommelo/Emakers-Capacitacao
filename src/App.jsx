@@ -1,6 +1,11 @@
 import { useState } from 'react'
 
+import TodoBlocks from './components/TodoBlocks';
+import TodoCreate from './components/TodoCreate';
+
+
 import "./App.css";
+
 
 function App() {
   const [todos, setTodos] = useState([
@@ -21,38 +26,31 @@ function App() {
     }
   ]);
 
+  const addTodo = (Nome) => {
+
+    const newTodos = [...todos, {
+      id: Math.floor(Math.random() * 10000),
+      Nome,
+      situação: 0,
+    },
+  ];
+
+  setTodos(newTodos);
+  };
+
+
+
   return (
     <div >
       <div className='topo'>
         <div className='title'><p id='cu'>To do List</p></div>
-        <div className='cab'>
-        </div>
-        <div className='input'>
-            <input type="text" placeholder='Ex: Levar o lixo para a rua' />
-            <button id='butaoInput'>Adicionar tarefa</button>
-          </div>
-      </div>
+        <div className='barra'></div>
+        <div className='cab'> </div>       
+        <TodoCreate addTodo={addTodo}/>
+      </div>      
       <div className='barraLaranja'></div>
       <div className='bottom'>
-      <div className='todos'>
-        <div className='todo-block'>
-          <div className='block-Title'><p>TO DO</p></div>
-          {todos.map((todo) =>(
-            <div className="content">
-              <p>{todo.Nome}</p>
-              <button className='seta'>⮕</button>
-            </div>
-          ))}
-        </div>
-        <div className='todo-block'>
-          <div className='block-Title'><p>DOING</p></div>
-          <button className='seta'>⮕</button>
-        </div>
-        <div className='todo-block'>
-          <div className='block-Title'><p>DONE</p></div>
-          <button className='seta'>⮕</button>
-        </div>
-      </div>
+        <TodoBlocks todos={todos} setTodos={setTodos}/>
       <div className='rodaPe'>
         <div className='logo'></div>
       </div>

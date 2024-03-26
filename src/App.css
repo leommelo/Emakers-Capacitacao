@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: 'Inter';
   background-image: url(./imgs/bg.jpeg);
   padding: 0%;
   margin: 0%;
@@ -29,6 +29,7 @@ input {
   width: 200px;
   height: 100%;
   background-color: #8137A4;
+  color: #FFFFFF;
   align-items: center;
   justify-content: center;
 }
@@ -42,10 +43,23 @@ input {
 }
 
 .input{
+
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barra{
+  height: 100%;
+  width: 10px;
+  background-color: orangered;
 }
 
 .barraLaranja{
@@ -90,6 +104,12 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.gridTodos{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .content{
