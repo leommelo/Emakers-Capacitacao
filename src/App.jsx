@@ -11,12 +11,12 @@ function App() {
     },
     {
       id: 2,
-      Nome: "Criar cuzinho",
+      Nome: "Varrer a salinha",
       situação: 0,
     },
     {
-      id: 1,
-      Nome: "Criar piruzinho",
+      id: 3,
+      Nome: "Estudar para grafos",
       situação: 0,
     }
   ]);
